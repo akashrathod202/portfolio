@@ -1,4 +1,4 @@
-<script>
+ 
 /* ── LOADER ── */
 let lp=0;const lpg=document.getElementById('lpg'),lsub=document.getElementById('lsub'),loader=document.getElementById('loader'),lfillT=document.getElementById('lfillT');
 const msgs=['Compiling...','Loading assets...','Almost done...','Welcome!'];let mi=0;
@@ -183,4 +183,4 @@ ACHIEVEMENTS
   document.body.appendChild(toast);
   setTimeout(()=>toast.remove(),3000);
 }
-</script>
+ 
