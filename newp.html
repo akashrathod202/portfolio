@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Akash Rathod — Backend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,600,700,900&display=swap" rel="stylesheet"/>
+ <style>
+
+ </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="l-mark" id="lmark">
+    AKASH.DEV
+    <div class="l-fill-text" id="lfillT">AKASH.DEV</div>
+  </div>
+  <div class="l-bar"><div class="l-prog" id="lpg"></div></div>
+  <div class="l-sub" id="lsub">Loading...</div>
+</div>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="curO"></div>
+
+<!-- ATMOSPHERE -->
+<div class="noise"></div>
+<div class="glow-orb go1"></div>
+<div class="glow-orb go2"></div>
+<div class="glow-orb go3"></div>
+<div id="prog"></div>
+
+<!-- ══════ NAV ══════ -->
+<nav>
+  <div class="nav-logo">
+    <div class="nl-ring">AR</div>
+    Akash Rathod
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="avail-pill"><div class="avail-dot"></div>Open to Work</div>
+    <button class="nav-resume" onclick="downloadResume()">Resume ↓</button>
+    <div class="ham" onclick="toggleMob()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mob-nav" id="mnav">
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#skills" onclick="closeMob()">Skills</a>
+  <a href="#projects" onclick="closeMob()">Projects</a>
+  <a href="#journey" onclick="closeMob()">Journey</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <button onclick="downloadResume();closeMob()" style="background:var(--coral);color:#fff;border:none;border-radius:12px;padding:.85rem 1.5rem;font-family:'Satoshi',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.5rem;text-align:left">Download Resume ↓</button>
+</div>
+
+<!-- ══════ DOCK ══════ -->
+<div class="dock">
+  <a href="#about" class="di"><span class="die">👤</span>About</a>
+  <a href="#skills" class="di"><span class="die">⚡</span>Skills</a>
+  <a href="#projects" class="di"><span class="die">🚀</span>Work</a>
+  <a href="#journey" class="di"><span class="die">🗺</span>Path</a>
+  <a href="#contact" class="di"><span class="die">✉</span>Say Hi</a>
+</div>
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-eyebrow">
+    <span></span>
+    Backend Engineer · MCA Student · DSA Enthusiast
+    <span></span>
+  </div>
+  <h1 class="hero-hl">
+    <span class="ln"><span>Engineered</span></span>
+    <span class="ln"><span><span class="coral-word" data-text="to Scale.">to Scale.</span></span></span>
+    <span class="ln"><span class="dim">Built to Last.</span></span>
+  </h1>
+
+  <!-- BENTO -->
+  <div class="bento">
+
+    <!-- Intro card -->
+    <div class="bc bc-intro">
+      <div class="intro-top">
+        <!-- Animated Dev Avatar SVG -->
+        <div class="intro-avatar">
+          <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+            <circle cx="36" cy="36" r="36" fill="#141929"/>
+            <circle cx="36" cy="36" r="34" fill="none" stroke="rgba(255,107,71,0.2)" stroke-width="1"/>
+            <!-- Face -->
+            <ellipse cx="36" cy="34" rx="15" ry="16" fill="#C8956C"/>
+            <!-- Hair -->
+            <path d="M21 28 Q22 17 36 15 Q50 17 51 28 Q46 20 42 18 Q39 22 36 21 Q33 22 30 18 Q26 20 21 28Z" fill="#1A1628"/>
+            <!-- Glasses -->
+            <rect x="22.5" y="28.5" width="10" height="8" rx="3" fill="none" stroke="#FF6B47" stroke-width="1.5"/>
+            <rect x="39.5" y="28.5" width="10" height="8" rx="3" fill="none" stroke="#FF6B47" stroke-width="1.5"/>
+            <line x1="32.5" y1="32" x2="39.5" y2="32" stroke="#FF6B47" stroke-width="1.5"/>
+            <line x1="22.5" y1="32" x2="19" y2="33" stroke="#FF6B47" stroke-width="1.2"/>
+            <line x1="49.5" y1="32" x2="53" y2="33" stroke="#FF6B47" stroke-width="1.2"/>
+            <!-- Eyes -->
+            <circle cx="27.5" cy="32.5" r="2.2" fill="#1A1628"/>
+            <circle cx="44.5" cy="32.5" r="2.2" fill="#1A1628"/>
+            <circle cx="28.1" cy="31.8" r=".75" fill="white"/>
+            <circle cx="45.1" cy="31.8" r=".75" fill="white"/>
+            <!-- Smile -->
+            <path d="M30 41 Q36 46 42 41" stroke="#9a6040" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+            <!-- Headphones -->
+            <path d="M21 31 Q21 18 36 17 Q51 18 51 31" stroke="#1E3860" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <rect x="17.5" y="28" width="6" height="8" rx="3" fill="#1E3860"/>
+            <rect x="48.5" y="28" width="6" height="8" rx="3" fill="#1E3860"/>
+            <!-- LED on headphones -->
+            <circle cx="20.5" cy="32" r="1.5" fill="#FF6B47"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+            <circle cx="51.5" cy="32" r="1.5" fill="#00D4B4"><animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="1s" repeatCount="indefinite"/></circle>
+            <!-- Shirt/hoodie -->
+            <path d="M19 52 Q17 57 17 63 L55 63 Q55 57 53 52 L47 46 Q42 54 36 54 Q30 54 25 46Z" fill="#1E3860"/>
+            <!-- Blink -->
+            <rect x="25.2" y="30.5" width="4.5" height="0" rx="2" fill="#C8956C">
+              <animate attributeName="height" values="0;3.5;0" dur="4s" begin="2s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="42.2" y="30.5" width="4.5" height="0" rx="2" fill="#C8956C">
+              <animate attributeName="height" values="0;3.5;0" dur="4s" begin="2s" repeatCount="indefinite"/>
+            </rect>
+          </svg>
+        </div>
+        <div class="intro-badge"><div class="ib-dot"></div>Available for Hire</div>
+      </div>
+      <div>
+        <div class="intro-name">Akash<br/>Rathod</div>
+        <div class="intro-role">Backend Developer · MCA Student</div>
+        <div class="intro-desc">Building scalable architectures and solving complex algorithmic challenges. I transform coffee and curiosity into production-ready systems.</div>
+        <div class="intro-stats">
+          <div class="is"><div class="is-n"><span class="counter" data-t="250">0</span>+</div><div class="is-l">DSA Solved</div></div>
+          <div class="is"><div class="is-n"><span class="counter" data-t="8">0</span>+</div><div class="is-l">Projects</div></div>
+          <div class="is"><div class="is-n">8.32</div><div class="is-l">CGPA</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Available card -->
+    <div class="bc bc-avail">
+      <div class="av-head">
+        <div class="av-icon">🚀</div>
+        <div class="av-chip">● Now Open</div>
+      </div>
+      <div>
+        <div class="av-title">Seeking<br/>Internships</div>
+        <div class="av-sub">Backend & SDE intern roles. Based in Pune, open to remote. Responding within 24h.</div>
+        <a href="#contact" class="av-btn">Let's talk →</a>
+      </div>
+    </div>
+
+    <!-- Stats card -->
+    <div class="bc bc-stats">
+      <div class="qst"><div class="qst-n">90%</div><div class="qst-l">Python</div></div>
+      <div class="qst accent"><div class="qst-n">83%</div><div class="qst-l">DSA</div></div>
+      <div class="qst"><div class="qst-n">85%</div><div class="qst-l">REST API</div></div>
+      <div class="qst"><div class="qst-n">76%</div><div class="qst-l">Node.js</div></div>
+    </div>
+
+    <!-- Stack ticker -->
+    <div class="bc bc-stack">
+      <div class="st-label">Current Stack</div>
+      <div class="ticker-wrap">
+        <div class="ticker-row">
+          <span class="tick">🐍 Python</span><span class="tick">🟢 Node.js</span><span class="tick">⚡ Express</span><span class="tick">🍃 MongoDB</span><span class="tick">🔴 Redis</span><span class="tick">🐳 Docker</span><span class="tick">☁️ AWS</span><span class="tick">🐙 Git</span><span class="tick">🔐 JWT</span><span class="tick">📐 REST API</span>
+          <span class="tick">🐍 Python</span><span class="tick">🟢 Node.js</span><span class="tick">⚡ Express</span><span class="tick">🍃 MongoDB</span><span class="tick">🔴 Redis</span><span class="tick">🐳 Docker</span><span class="tick">☁️ AWS</span><span class="tick">🐙 Git</span><span class="tick">🔐 JWT</span><span class="tick">📐 REST API</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact strip -->
+    <div class="bc bc-contact">
+      <div class="ci"><span class="ci-ico">📍</span><div><strong>Pune, Maharashtra</strong></div></div>
+      <div class="cdivide"></div>
+      <div class="ci"><span class="ci-ico">📧</span><div><strong><a href="mailto:akashrathod.dev@gmail.com">akashrathod.dev@gmail.com</a></strong></div></div>
+      <div class="cdivide"></div>
+      <div class="ci"><span class="ci-ico">💼</span><div><strong>linkedin.com/in/iamakash-rathod</strong></div></div>
+      <div class="ctas">
+        <a href="mailto:akashrathod.dev@gmail.com" class="cbtn prim">Email Me</a>
+        <a href="#projects" class="cbtn out">View Work</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="scroll-hint"><div class="sh-line"></div>scroll to explore</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════
+     ABOUT — WITH ILLUSTRATION
+══════════════════════════════════ -->
+<div id="about">
+  <div class="about-wrap">
+    <div class="sec-label">01 · About Me</div>
+    <div class="about-grid">
+
+      <!-- LEFT: text -->
+      <div class="rvl">
+        <h2 class="about-headline">Engineering<br/><em>elegant</em> solutions<br/>to complex problems.</h2>
+        <p class="about-body">I'm an MCA student at D. Y. Patil Institute with a deep passion for backend engineering and algorithmic problem-solving. My days start with LeetCode, continue building APIs that scale, and end reading system design case studies.</p>
+        <p class="about-body">I don't just write code — I architect solutions. Whether it's designing database schemas, optimizing query performance, or building fault-tolerant microservices, every challenge gets curiosity and rigor.</p>
+        <div class="about-quote">
+          <p>"Great backend engineering is invisible — the app just works, always."</p>
+        </div>
+        <div class="about-ctas">
+          <a href="#contact" class="abtn prim">Get In Touch →</a>
+          <button class="abtn sec" onclick="downloadResume()">Download Resume ↓</button>
+        </div>
+      </div>
+
+      <!-- RIGHT: illustration + edu -->
+      <div class="rvr">
+        <!-- ANIMATED DEV ILLUSTRATION -->
+        <div class="about-illustration">
+          <div class="illus-bg"></div>
+          <div class="illus-ring"></div>
+          <div class="illus-ring2"></div>
+
+          <!-- Orbit dots -->
+          <div class="orb-dot od1"></div>
+          <div class="orb-dot od2"></div>
+          <div class="orb-dot od3"></div>
+
+          <!-- Floating info chips -->
+          <div class="chip-float cf1">
+            <div class="chip-dot" style="background:#FF6B47"></div>
+            250+ DSA Solved
+          </div>
+          <div class="chip-float cf2">
+            <div class="chip-dot" style="background:#00D4B4"></div>
+            Backend Dev
+          </div>
+          <div class="chip-float cf3">
+            <div class="chip-dot" style="background:#F5C842"></div>
+            8+ Projects
+          </div>
+          <div class="chip-float cf4">
+            <div class="chip-dot" style="background:#9B7FFF"></div>
+            MCA Student
+          </div>
+
+          <!-- Main SVG Illustration — Developer at workstation -->
+          <div class="dev-svg-wrap">
+            <svg viewBox="0 0 360 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="deskG" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#1A2035"/>
+                  <stop offset="100%" stop-color="#0F1424"/>
+                </linearGradient>
+                <linearGradient id="screenG" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#0d1424"/>
+                  <stop offset="100%" stop-color="#060c1a"/>
+                </linearGradient>
+                <linearGradient id="shirtG" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#1E3860"/>
+                  <stop offset="100%" stop-color="#0F2040"/>
+                </linearGradient>
+                <linearGradient id="skinG" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#C8956C"/>
+                  <stop offset="100%" stop-color="#B5733A"/>
+                </linearGradient>
+                <filter id="devShadow">
+                  <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="rgba(0,0,0,0.6)"/>
+                </filter>
+                <radialGradient id="screenGlow" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="rgba(255,107,71,0.06)"/>
+                  <stop offset="100%" stop-color="transparent"/>
+                </radialGradient>
+              </defs>
+
+              <!-- Shadow -->
+              <ellipse cx="180" cy="370" rx="100" ry="10" fill="rgba(0,0,0,0.4)"/>
+
+              <!-- CHAIR -->
+              <rect x="145" y="295" width="70" height="8" rx="4" fill="#141929" opacity=".7"/>
+              <rect x="168" y="303" width="10" height="45" rx="3" fill="#0d1117"/>
+              <rect x="182" y="303" width="10" height="45" rx="3" fill="#0d1117"/>
+
+              <!-- DESK -->
+              <rect x="65" y="268" width="230" height="11" rx="5" fill="url(#deskG)" filter="url(#devShadow)"/>
+              <rect x="75" y="279" width="7" height="55" rx="2.5" fill="#0d1117"/>
+              <rect x="278" y="279" width="7" height="55" rx="2.5" fill="#0d1117"/>
+
+              <!-- MONITOR BODY -->
+              <rect x="95" y="170" width="170" height="108" rx="10" fill="#141929" stroke="rgba(255,107,71,0.12)" stroke-width="1.5"/>
+
+              <!-- SCREEN -->
+              <rect x="103" y="177" width="154" height="92" rx="7" fill="url(#screenG)"/>
+              <rect x="103" y="177" width="154" height="92" rx="7" fill="url(#screenGlow)"/>
+
+              <!-- Code lines on screen -->
+              <g font-family="'JetBrains Mono',monospace" font-size="6.5">
+                <text x="111" y="191" fill="#9B7FFF">class</text>
+                <text x="134" y="191" fill="#FF6B47"> Developer</text>
+                <text x="181" y="191" fill="#4A4A6A">:</text>
+                <text x="115" y="200" fill="#9B7FFF">def</text>
+                <text x="128" y="200" fill="#F0EDE6"> __init__</text>
+                <text x="163" y="200" fill="#4A4A6A">(self):</text>
+                <text x="119" y="209" fill="#F0EDE6">self.lang</text>
+                <text x="151" y="209" fill="#4A4A6A"> = </text>
+                <text x="160" y="209" fill="#00D4B4">"Python"</text>
+                <text x="119" y="218" fill="#F0EDE6">self.dsa</text>
+                <text x="149" y="218" fill="#4A4A6A"> = </text>
+                <text x="157" y="218" fill="#F5C842">250</text>
+                <text x="119" y="227" fill="#F0EDE6">self.hire</text>
+                <text x="151" y="227" fill="#4A4A6A"> = </text>
+                <text x="159" y="227" fill="#00D4B4">True</text>
+                <!-- terminal line -->
+                <text x="111" y="243" fill="#00D4B4">❯</text>
+                <text x="119" y="243" fill="#4A4A6A">python main.py</text>
+                <text x="111" y="254" fill="#9A95A8">Running server on :8080</text>
+                <!-- cursor -->
+                <rect x="111" y="260" width="5" height="7" rx="1" fill="#FF6B47">
+                  <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+                </rect>
+              </g>
+
+              <!-- Screen border glow -->
+              <rect x="103" y="177" width="154" height="92" rx="7" fill="none" stroke="rgba(255,107,71,0.08)" stroke-width="1"/>
+
+              <!-- Monitor stand -->
+              <rect x="175" y="278" width="10" height="12" rx="2" fill="#141929"/>
+              <rect x="163" y="288" width="34" height="4" rx="2" fill="#1A2035"/>
+
+              <!-- KEYBOARD -->
+              <rect x="115" y="263" width="130" height="7" rx="3" fill="#141929" stroke="rgba(255,107,71,0.08)" stroke-width="1"/>
+              <g fill="#1A2035">
+                <rect x="118" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="127" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="136" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="145" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="154" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="163" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="172" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="181" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="190" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="199" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="208" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="217" y="264.5" width="7" height="3.5" rx="1"/>
+                <rect x="136" y="268.5" width="48" height="2.5" rx="1"/>
+              </g>
+
+              <!-- BODY / HOODIE -->
+              <path d="M128 245 Q115 252 110 270 L105 300 L255 300 L250 270 Q245 252 232 245 L222 237 Q208 258 180 258 Q152 258 138 237 Z" fill="url(#shirtG)"/>
+              <!-- Hoodie pocket -->
+              <rect x="162" y="268" width="36" height="22" rx="8" fill="rgba(0,0,0,0.2)"/>
+              <!-- Strings -->
+              <line x1="174" y1="255" x2="170" y2="268" stroke="rgba(255,107,71,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="186" y1="255" x2="190" y2="268" stroke="rgba(255,107,71,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+
+              <!-- LEFT ARM -->
+              <path d="M126 248 Q106 260 103 275" stroke="url(#shirtG)" stroke-width="22" stroke-linecap="round" fill="none"/>
+              <ellipse cx="104" cy="276" rx="9" ry="5.5" fill="url(#skinG)" transform="rotate(-15 104 276)"/>
+              <line x1="97" y1="273" x2="92" y2="270" stroke="url(#skinG)" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="100" y1="271" x2="97" y2="266" stroke="url(#skinG)" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="104" y1="271" x2="103" y2="266" stroke="url(#skinG)" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="109" y1="272" x2="111" y2="268" stroke="url(#skinG)" stroke-width="3.5" stroke-linecap="round"/>
+
+              <!-- RIGHT ARM -->
+              <path d="M234 248 Q254 260 257 275" stroke="url(#shirtG)" stroke-width="22" stroke-linecap="round" fill="none"/>
+              <ellipse cx="256" cy="276" rx="9" ry="5.5" fill="url(#skinG)" transform="rotate(15 256 276)"/>
+              <line x1="263" y1="273" x2="268" y2="270" stroke="url(#skinG)" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="260" y1="271" x2="263" y2="266" stroke="url(#skinG)" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="256" y1="271" x2="257" y2="266" stroke="url(#skinG)" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="251" y1="272" x2="249" y2="268" stroke="url(#skinG)" stroke-width="3.5" stroke-linecap="round"/>
+
+              <!-- NECK -->
+              <rect x="170" y="222" width="20" height="18" rx="7" fill="url(#skinG)"/>
+
+              <!-- HEAD -->
+              <ellipse cx="180" cy="198" rx="40" ry="43" fill="url(#skinG)" filter="url(#devShadow)"/>
+
+              <!-- HAIR -->
+              <path d="M142 184 Q144 155 180 152 Q216 155 218 184 Q209 165 202 162 Q196 168 180 166 Q164 168 158 162 Q151 165 142 184Z" fill="#1A1628"/>
+
+              <!-- EYES -->
+              <circle cx="165" cy="197" r="6.5" fill="#1a2035"/>
+              <circle cx="165" cy="197" r="4.5" fill="#080c14"/>
+              <circle cx="165" cy="197" r="3" fill="#FF6B47" opacity=".7"/>
+              <circle cx="166.2" cy="195.7" r="1.1" fill="white" opacity=".9"/>
+              <circle cx="195" cy="197" r="6.5" fill="#1a2035"/>
+              <circle cx="195" cy="197" r="4.5" fill="#080c14"/>
+              <circle cx="195" cy="197" r="3" fill="#FF6B47" opacity=".7"/>
+              <circle cx="196.2" cy="195.7" r="1.1" fill="white" opacity=".9"/>
+
+              <!-- Blink -->
+              <rect x="158" y="193.5" width="14" height="0" rx="4" fill="url(#skinG)">
+                <animate attributeName="height" values="0;7;0" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+              </rect>
+              <rect x="188" y="193.5" width="14" height="0" rx="4" fill="url(#skinG)">
+                <animate attributeName="height" values="0;7;0" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+              </rect>
+
+              <!-- Eyebrows -->
+              <path d="M157 188 Q165 185 173 187" stroke="#2A1A1A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M187 187 Q195 185 203 188" stroke="#2A1A1A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+              <!-- Nose -->
+              <path d="M178 204 Q175 212 178 213 Q181 212 181 213 Q184 212 181 204" stroke="#9a6040" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+              <!-- Smile -->
+              <path d="M170 220 Q180 228 190 220" stroke="#9a6040" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+
+              <!-- GLASSES (coral frames) -->
+              <rect x="154" y="190" width="19" height="14" rx="5" fill="rgba(255,107,71,0.04)" stroke="#FF6B47" stroke-width="1.5"/>
+              <rect x="187" y="190" width="19" height="14" rx="5" fill="rgba(255,107,71,0.04)" stroke="#FF6B47" stroke-width="1.5"/>
+              <line x1="173" y1="197" x2="187" y2="197" stroke="#FF6B47" stroke-width="1.5"/>
+              <line x1="154" y1="197" x2="147" y2="198" stroke="#FF6B47" stroke-width="1.5"/>
+              <line x1="206" y1="197" x2="213" y2="198" stroke="#FF6B47" stroke-width="1.5"/>
+              <!-- Lens gleam -->
+              <line x1="157" y1="193" x2="162" y2="192" stroke="rgba(255,255,255,0.35)" stroke-width="1" stroke-linecap="round"/>
+              <line x1="190" y1="193" x2="195" y2="192" stroke="rgba(255,255,255,0.35)" stroke-width="1" stroke-linecap="round"/>
+
+              <!-- HEADPHONES -->
+              <path d="M144 195 Q146 165 180 163 Q214 165 216 195" stroke="#1E3060" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <rect x="137" y="191" width="12" height="16" rx="6" fill="#1E3060" stroke="rgba(255,107,71,0.15)" stroke-width="1"/>
+              <rect x="211" y="191" width="12" height="16" rx="6" fill="#1E3060" stroke="rgba(255,107,71,0.15)" stroke-width="1"/>
+              <circle cx="143" cy="199" r="2" fill="#FF6B47"><animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/></circle>
+              <circle cx="217" cy="199" r="2" fill="#00D4B4"><animate attributeName="opacity" values="1;0.2;1" dur="2s" begin="1s" repeatCount="indefinite"/></circle>
+
+              <!-- COFFEE on desk -->
+              <g transform="translate(285 242)">
+                <rect x="0" y="0" width="20" height="22" rx="3.5" fill="#141929" stroke="rgba(255,107,71,0.2)" stroke-width="1"/>
+                <path d="M20 7 Q27 7 27 13 Q27 19 20 19" stroke="rgba(255,107,71,0.3)" stroke-width="2" fill="none"/>
+                <rect x="1.5" y="1.5" width="17" height="7" rx="2" fill="#3D1F05" opacity=".8"/>
+                <text x="3" y="17" font-family="monospace" font-size="5" fill="#FF6B47" opacity=".5">{}</text>
+                <!-- steam -->
+                <path d="M6 -4 Q7 -9 6 -13" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" fill="none" stroke-linecap="round">
+                  <animate attributeName="opacity" values="0;0.3;0" dur="2.5s" repeatCount="indefinite"/>
+                </path>
+                <path d="M11 -5 Q12 -10 11 -15" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" fill="none" stroke-linecap="round">
+                  <animate attributeName="opacity" values="0;0.25;0" dur="2.5s" begin=".7s" repeatCount="indefinite"/>
+                </path>
+              </g>
+
+              <!-- PLANT -->
+              <g transform="translate(52 240)">
+                <rect x="3" y="20" width="14" height="14" rx="3" fill="#141929" stroke="rgba(0,212,180,0.15)" stroke-width="1"/>
+                <path d="M10 20 Q7 11 4 7 Q9 9 10 17" fill="#0A3020"/>
+                <path d="M10 20 Q13 9 17 5 Q12 9 10 17" fill="#0D4028"/>
+                <circle cx="10" cy="18" r="2" fill="#00D4B4" opacity=".4"><animate attributeName="r" values="2;2.5;2" dur="3s" repeatCount="indefinite"/></circle>
+              </g>
+
+              <!-- Floating code bits -->
+              <g font-family="monospace" font-size="9" opacity=".18">
+                <text x="45" y="155" fill="#FF6B47"><animateTransform attributeName="transform" type="translate" values="0,0;3,-12;0,0" dur="5s" repeatCount="indefinite"/>&lt;/&gt;</text>
+                <text x="295" y="160" fill="#00D4B4"><animateTransform attributeName="transform" type="translate" values="0,0;-4,-10;0,0" dur="4s" begin="1s" repeatCount="indefinite"/>{}</text>
+                <text x="55" y="255" fill="#9B7FFF"><animateTransform attributeName="transform" type="translate" values="0,0;2,-8;0,0" dur="6s" begin="2s" repeatCount="indefinite"/>();</text>
+                <text x="280" y="240" fill="#F5C842"><animateTransform attributeName="transform" type="translate" values="0,0;-3,-6;0,0" dur="4.5s" begin=".5s" repeatCount="indefinite"/>=&gt;</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="sec-label" style="margin-bottom:1rem">Education</div>
+        <div class="edu-list">
+          <div class="edu-card">
+            <div>
+              <div class="edu-deg">Master of Computer Applications</div>
+              <div class="edu-sch">D. Y. Patil Institute of MCA</div>
+              <div class="edu-yr">2025 — 2027 · In Progress</div>
+            </div>
+            <div class="edu-badge">Active</div>
+          </div>
+          <div class="edu-card">
+            <div>
+              <div class="edu-deg">Bachelor of Computer Applications</div>
+              <div class="edu-sch">G H Raisoni University, Amravati</div>
+              <div class="edu-yr">2022 — 2025</div>
+            </div>
+            <div class="edu-badge">8.32 CGPA</div>
+          </div>
+          <div class="edu-card">
+            <div>
+              <div class="edu-deg">Higher Secondary (12th)</div>
+              <div class="edu-sch">Shri Shivaji Junior College</div>
+              <div class="edu-yr">2021 — 2022</div>
+            </div>
+            <div class="edu-badge">86%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════
+     SKILLS
+══════════════════════════════════ -->
+<section id="skills">
+  <div class="skills-wrap">
+    <div class="sec-label" style="color:var(--ink3)"><span style="color:var(--coral)">─</span> 02 · Skills</div>
+    <div class="skills-header rv">
+      <div class="sk-title">My<br/>Toolkit.</div>
+      <div class="sk-sub">Tools and technologies I use to build robust, scalable systems that handle real load.</div>
+    </div>
+
+    <!-- Bars -->
+    <div class="bars rv">
+      <div class="bar-item"><div class="bar-top"><div class="bar-name"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M11.77 0C5.33 0 5.7 2.77 5.7 2.77l.01 2.87h6.14v.86H3.63S0 6.1 0 12.6s3.6 6.27 3.6 6.27H5.7v-3.02s-.11-3.6 3.54-3.6h6.1s3.43.06 3.43-3.31V3.36S19.34 0 11.77 0zm-3.4 1.94a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z" fill="#3776AB"/><path d="M12.23 24c6.44 0 6.07-2.77 6.07-2.77l-.01-2.87h-6.14v-.86h8.22S24 17.9 24 11.4s-3.6-6.27-3.6-6.27H18.3v3.02s.11 3.6-3.54 3.6h-6.1S5.23 11.69 5.23 15.06v5.58S4.66 24 12.23 24zm3.4-1.94a1.1 1.1 0 110-2.2 1.1 1.1 0 010 2.2z" fill="#FFD43B"/></svg>Python</div><div class="bar-pct">90%</div></div><div class="bar-track"><div class="bar-fill" data-w="90"></div></div></div>
+      <div class="bar-item"><div class="bar-top"><div class="bar-name">📊 DSA & Algorithms</div><div class="bar-pct">83%</div></div><div class="bar-track"><div class="bar-fill" data-w="83"></div></div></div>
+      <div class="bar-item"><div class="bar-top"><div class="bar-name"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 1.85c-.27 0-.55.07-.78.2l-7.44 4.3c-.48.28-.78.8-.78 1.36v8.58c0 .56.3 1.08.78 1.36l1.95 1.12c.95.46 1.27.47 1.71.47 1.4 0 2.21-.85 2.21-2.33V8.44c0-.12-.1-.22-.22-.22H8.5c-.13 0-.22.1-.22.22v8.47c0 .66-.68 1.31-1.77.76L4.6 16.5a.26.26 0 01-.13-.22V7.71c0-.09.04-.17.13-.22l7.44-4.29c.08-.05.2-.05.28 0l7.44 4.29c.08.05.13.13.13.22v8.58c0 .08-.05.17-.13.22l-7.44 4.29c-.08.04-.2.04-.28 0L10.2 19.7c-.08-.04-.17-.04-.24 0-.68.38-.82.44-1.46.62l7.44-4.29c.48-.28.78-.8.78-1.36V7.71c0-.56-.3-1.08-.78-1.36l-7.44-4.3A1.56 1.56 0 0012 1.85z" fill="#68A063"/></svg>Node.js + Express</div><div class="bar-pct">76%</div></div><div class="bar-track"><div class="bar-fill" data-w="76"></div></div></div>
+      <div class="bar-item"><div class="bar-top"><div class="bar-name">🔷 OOP & Design Patterns</div><div class="bar-pct">88%</div></div><div class="bar-track"><div class="bar-fill" data-w="88"></div></div></div>
+      <div class="bar-item"><div class="bar-top"><div class="bar-name"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M17.193 9.555c-1.264-5.58-4.252-7.243-4.672-8.03-.566-1.1-.756-1.479-1.283-1.35-.22.053-.438.31-.511.43-.785 1.233.38 2.516 1.124 3.4 1.285 1.51 2.062 3.327 2.37 5.29-1.264-.77-2.52-.65-3.283-.42-.63.19-1.34.62-1.72 1.3-.427.77-.34 1.71.107 2.42.465.73 1.37 1.15 2.24 1.17 1.33.033 2.55-.9 3.1-2.22.79 1.04 2 1.95 3.48 2.3 1.026.24 2.057.2 2.96-.17 1.12-.45 1.84-1.42 2.06-2.6.63-3.47-1.84-4.39-5.97-1.53z" fill="#47A248"/></svg>MongoDB</div><div class="bar-pct">72%</div></div><div class="bar-track"><div class="bar-fill" data-w="72"></div></div></div>
+      <div class="bar-item"><div class="bar-top"><div class="bar-name">🔌 REST API Design</div><div class="bar-pct">85%</div></div><div class="bar-track"><div class="bar-fill" data-w="85"></div></div></div>
+      <div class="bar-item"><div class="bar-top"><div class="bar-name"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" fill="#F05032"/></svg>Git & GitHub</div><div class="bar-pct">80%</div></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+      <div class="bar-item"><div class="bar-top"><div class="bar-name">🐳 Docker</div><div class="bar-pct">55%</div></div><div class="bar-track"><div class="bar-fill" data-w="55"></div></div></div>
+    </div>
+
+    <!-- Tech Grid -->
+    <div class="tech-label rv">Technologies & Tools</div>
+    <div class="tech-grid rv">
+      <div class="tcard" style="--tc-color:#3776AB"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M11.77 0C5.33 0 5.7 2.77 5.7 2.77l.01 2.87h6.14v.86H3.63S0 6.1 0 12.6s3.6 6.27 3.6 6.27H5.7v-3.02s-.11-3.6 3.54-3.6h6.1s3.43.06 3.43-3.31V3.36S19.34 0 11.77 0zm-3.4 1.94a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z" fill="#3776AB"/><path d="M12.23 24c6.44 0 6.07-2.77 6.07-2.77l-.01-2.87h-6.14v-.86h8.22S24 17.9 24 11.4s-3.6-6.27-3.6-6.27H18.3v3.02s.11 3.6-3.54 3.6h-6.1S5.23 11.69 5.23 15.06v5.58S4.66 24 12.23 24zm3.4-1.94a1.1 1.1 0 110-2.2 1.1 1.1 0 010 2.2z" fill="#FFD43B"/></svg></div><div class="tc-name">Python</div><div class="tc-lvl">Expert</div></div>
+
+      <div class="tcard" style="--tc-color:#68A063"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 1.85c-.27 0-.55.07-.78.2l-7.44 4.3c-.48.28-.78.8-.78 1.36v8.58c0 .56.3 1.08.78 1.36l1.95 1.12c.95.46 1.27.47 1.71.47 1.4 0 2.21-.85 2.21-2.33V8.44c0-.12-.1-.22-.22-.22H8.5c-.13 0-.22.1-.22.22v8.47c0 .66-.68 1.31-1.77.76L4.6 16.5a.26.26 0 01-.13-.22V7.71c0-.09.04-.17.13-.22l7.44-4.29c.08-.05.2-.05.28 0l7.44 4.29c.08.05.13.13.13.22v8.58c0 .08-.05.17-.13.22l-7.44 4.29c-.08.04-.2.04-.28 0L10.2 19.7c-.08-.04-.17-.04-.24 0-.68.38-.82.44-1.46.62l7.44-4.29c.48-.28.78-.8.78-1.36V7.71c0-.56-.3-1.08-.78-1.36l-7.44-4.3A1.56 1.56 0 0012 1.85z" fill="#68A063"/></svg></div><div class="tc-name">Node.js</div><div class="tc-lvl">Advanced</div></div>
+
+      <div class="tcard" style="--tc-color:#47A248"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M17.193 9.555c-1.264-5.58-4.252-7.243-4.672-8.03-.566-1.1-.756-1.479-1.283-1.35-.22.053-.438.31-.511.43-.785 1.233.38 2.516 1.124 3.4 1.285 1.51 2.062 3.327 2.37 5.29-1.264-.77-2.52-.65-3.283-.42-.63.19-1.34.62-1.72 1.3-.427.77-.34 1.71.107 2.42.465.73 1.37 1.15 2.24 1.17 1.33.033 2.55-.9 3.1-2.22.79 1.04 2 1.95 3.48 2.3 1.026.24 2.057.2 2.96-.17 1.12-.45 1.84-1.42 2.06-2.6.63-3.47-1.84-4.39-5.97-1.53z" fill="#47A248"/></svg></div><div class="tc-name">MongoDB</div><div class="tc-lvl">Advanced</div></div>
+
+      <div class="tcard" style="--tc-color:#DC382D"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M10.5 7.5L4 11l6.5 3.5 6.5-3.5L10.5 7.5z" fill="#DC382D"/><path d="M4 11v3l6.5 3.5V14L4 11z" fill="#A51F16"/><path d="M10.5 14.5V18L17 14.5V11l-6.5 3.5z" fill="#DC382D"/><path d="M2.5 5.5L10.5 0 18.5 5.5l-8 4.5-8-4.5z" fill="#FF6B6B"/></svg></div><div class="tc-name">Redis</div><div class="tc-lvl">Intermediate</div></div>
+
+      <div class="tcard" style="--tc-color:#F05032"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" fill="#F05032"/></svg></div><div class="tc-name">Git</div><div class="tc-lvl">Advanced</div></div>
+
+      <div class="tcard" style="--tc-color:#2496ED"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.186.186 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.92 0h2.12a.186.186 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288z" fill="#2496ED"/></svg></div><div class="tc-name">Docker</div><div class="tc-lvl">Learning</div></div>
+
+      <div class="tcard" style="--tc-color:#FF9900"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 01-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 01-.287-.375 6.18 6.18 0 01-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 01-.28.104.488.488 0 01-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 01.224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 011.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586z" fill="#FF9900"/><path d="M21.054 16.71c-2.573 1.9-6.31 2.91-9.528 2.91-4.508 0-8.569-1.664-11.636-4.43-.24-.216-.025-.51.263-.343 3.313 1.926 7.407 3.087 11.636 3.087 2.854 0 5.993-.591 8.882-1.82.432-.184.8.287.383.596z" fill="#FF9900"/><path d="M22.17 15.433c-.328-.421-2.171-.199-2.998-.1-.251.031-.29-.188-.064-.351 1.469-1.033 3.878-.734 4.16-.388.28.35-.073 2.76-1.454 3.914-.212.177-.415.083-.32-.15.31-.77 1.005-2.503.676-2.925z" fill="#FF9900"/></svg></div><div class="tc-name">AWS</div><div class="tc-lvl">Learning</div></div>
+
+      <div class="tcard" style="--tc-color:#d63aff"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M10.2 0v6.456L12 8.928l1.8-2.472V0zm3.6 6.456v3.072l2.904-.96L19.2 3.6zM16.7 9.6l-1.88 2.69 2.906.953 5.53-3.195zm1.024 3.643l-5.53 3.195.96 2.904 5.196-3zM13.8 17.544l-1.8-2.472-1.8 2.472v6.457h3.6zm-3.6-2.472l-.96-2.904-5.528 3.192 2.584 1.715zm-6.495.24L7.18 12.19l-2.88-.943L.25 10.854l-.002.002zm-3.459-4.624l5.533 3.196 1.88-2.69-2.904-.953z" fill="#d63aff"/></svg></div><div class="tc-name">JWT</div><div class="tc-lvl">Advanced</div></div>
+
+      <div class="tcard" style="--tc-color:#4479A1"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none"><ellipse cx="12" cy="6" rx="10" ry="4" stroke="#4479A1" stroke-width="1.5"/><path d="M2 6v4c0 2.21 4.477 4 10 4s10-1.79 10-4V6" stroke="#4479A1" stroke-width="1.5"/><path d="M2 10v4c0 2.21 4.477 4 10 4s10-1.79 10-4v-4" stroke="#4479A1" stroke-width="1.5"/><path d="M2 14v4c0 2.21 4.477 4 10 4s10-1.79 10-4v-4" stroke="#4479A1" stroke-width="1.5"/></svg></div><div class="tc-name">MySQL</div><div class="tc-lvl">Intermediate</div></div>
+
+      <div class="tcard" style="--tc-color:#FF6B47"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none"><circle cx="12" cy="12" r="9" stroke="#FF6B47" stroke-width="1.5" opacity=".4"/><circle cx="12" cy="12" r="5" stroke="#FF6B47" stroke-width="1.5" opacity=".65"/><circle cx="12" cy="12" r="2" fill="#FF6B47"/><line x1="3" y1="12" x2="21" y2="12" stroke="#FF6B47" stroke-width="1.2" opacity=".4"/><line x1="12" y1="3" x2="12" y2="21" stroke="#FF6B47" stroke-width="1.2" opacity=".4"/></svg></div><div class="tc-name">REST APIs</div><div class="tc-lvl">Expert</div></div>
+
+      <div class="tcard" style="--tc-color:#ffffff"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" fill="rgba(240,237,230,0.7)"/></svg></div><div class="tc-name">GitHub</div><div class="tc-lvl">Advanced</div></div>
+
+      <div class="tcard" style="--tc-color:#9B7FFF"><div class="tc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none"><path d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495z" stroke="#9B7FFF" stroke-width="1.5"/><path d="M12 14.5v3M9 19h6" stroke="#F5C842" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="tc-name">Flask</div><div class="tc-lvl">Intermediate</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════
+     PROJECTS
+══════════════════════════════════ -->
+<section id="projects">
+  <div class="proj-wrap">
+    <div class="sec-label">03 · Projects</div>
+    <div class="proj-top rv">
+      <div class="proj-title">Selected<br/><em>Work.</em></div>
+      <div class="proj-sub">Things I've built with care, curiosity, and a lot of coffee.</div>
+    </div>
+    <div class="proj-grid">
+      <div class="pcard feat rv">
+        <div class="pcard-inner">
+          <div class="pcard-head"><div class="pico">🔗</div><div class="plinks"><a href="#" class="plnk">⭐</a><a href="#" class="plnk">↗</a></div></div>
+          <div class="ptitle">URL Shortener Service</div>
+          <p class="pdesc">A URL shortening service with custom aliases, expiry dates, per-click analytics, and rate limiting. Built with Redis caching for sub-millisecond redirects and complete observability.</p>
+          <div>
+            <div class="pmetas" style="margin-bottom:.85rem"><span class="pmeta">O(1) Redirect</span><span class="pmeta">Per-click Log</span><span class="pmeta">Rate Limiting</span></div>
+            <div class="ptags" style="margin-bottom:1.25rem"><span class="ptag">Node.js</span><span class="ptag">Express</span><span class="ptag">MongoDB</span><span class="ptag">Redis</span><span class="ptag">REST API</span></div>
+            <div class="pacts"><a class="pact pr" href="#">GitHub ⭐</a><a class="pact sc" href="#">Live Demo ↗</a><a class="pact sc" href="#">Case Study 📄</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="pcard rv">
+        <div class="pcard-inner"><div class="pcard-head"><div class="pico">📊</div><div class="plinks"><a href="#" class="plnk">⭐</a><a href="#" class="plnk">↗</a></div></div><div class="ptitle">DSA Practice Tracker</div><p class="pdesc">Personal dashboard tracking LeetCode progress with streak tracking, difficulty distribution, charts, and topic-wise analysis.</p><div class="ptags"><span class="ptag">Python</span><span class="ptag">Flask</span><span class="ptag">MongoDB</span><span class="ptag">Chart.js</span></div></div>
+      </div>
+      <div class="pcard rv">
+        <div class="pcard-inner"><div class="pcard-head"><div class="pico">🔐</div><div class="plinks"><a href="#" class="plnk">⭐</a><a href="#" class="plnk">📄</a></div></div><div class="ptitle">Auth Microservice</div><p class="pdesc">Production-ready authentication with JWT rotation, email verification, OAuth2, and role-based access control. Fully documented with Swagger.</p><div class="ptags"><span class="ptag">Node.js</span><span class="ptag">JWT</span><span class="ptag">bcrypt</span><span class="ptag">OAuth2</span></div></div>
+      </div>
+      <div class="pcard rv">
+        <div class="pcard-inner"><div class="pcard-head"><div class="pico">🗂️</div><div class="plinks"><a href="#" class="plnk">⭐</a><a href="#" class="plnk">↗</a></div></div><div class="ptitle">Task Queue System</div><p class="pdesc">Async job processing using Bull queue with priority levels, retry logic, dead-letter queues, and real-time dashboard via WebSockets.</p><div class="ptags"><span class="ptag">Node.js</span><span class="ptag">Bull</span><span class="ptag">Redis</span><span class="ptag">WebSocket</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════
+     JOURNEY
+══════════════════════════════════ -->
+<section id="journey">
+  <div class="journey-wrap">
+    <div class="sec-label">04 · Journey</div>
+    <div class="journey-inner">
+      <div class="journey-sticky rvl">
+        <div class="jt">The path<br/><em>so far.</em></div>
+        <p class="js">From 86% in 12th to MCA — every step driven by curiosity and a love for building things that matter.</p>
+      </div>
+      <div class="tl">
+        <div class="tli"><div class="tl-dot"></div><div class="tl-card"><div class="tl-date">2025 — Present</div><div class="tl-title">MCA — D. Y. Patil Institute</div><p class="tl-desc">Pursuing Masters in Computer Applications, deepening expertise in advanced algorithms, distributed systems, and modern backend architecture.</p><div class="tl-badge tb-coral">Active</div></div></div>
+        <div class="tli"><div class="tl-dot"></div><div class="tl-card"><div class="tl-date">2024</div><div class="tl-title">250+ DSA Problems Solved</div><p class="tl-desc">Consistently solving challenges on LeetCode across arrays, trees, graphs, DP. Building algorithmic intuition every single day.</p><div class="tl-badge tb-teal">Milestone</div></div></div>
+        <div class="tli"><div class="tl-dot"></div><div class="tl-card"><div class="tl-date">2023 — 2024</div><div class="tl-title">Backend Projects — Node.js & Python</div><p class="tl-desc">Built multiple production-quality backend projects including URL shortener, auth microservice, and async task queues.</p><div class="tl-badge tb-violet">Projects</div></div></div>
+        <div class="tli"><div class="tl-dot"></div><div class="tl-card"><div class="tl-date">2022 — 2025</div><div class="tl-title">BCA — G H Raisoni University</div><p class="tl-desc">Completed Bachelor of Computer Applications with 8.32 CGPA. Strong foundation in programming, databases, and CS fundamentals.</p><div class="tl-badge tb-coral">8.32 CGPA</div></div></div>
+        <div class="tli"><div class="tl-dot"></div><div class="tl-card"><div class="tl-date">2022</div><div class="tl-title">12th — Shri Shivaji Junior College</div><p class="tl-desc">Completed HSC with 86%, discovering a deep passion for programming that set the entire course of my career.</p><div class="tl-badge tb-teal">86%</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════
+     CONTACT
+══════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="sec-label">05 · Contact</div>
+    <div class="ct-headline rv">
+      Let's build<br/><span class="ct-em">something</span><br/><span class="ct-coral">great.</span>
+    </div>
+    <div class="ct-grid">
+      <div class="rvl">
+        <p style="font-size:.95rem;color:var(--ink2);line-height:1.82;margin-bottom:2rem">Open to internship opportunities, backend roles, and interesting collaborations. I respond within 24 hours.</p>
+        <div class="slinks">
+          <a href="mailto:akashrathod.dev@gmail.com" class="slink"><div class="sl-ico">📧</div><div><div class="sl-lbl">Email</div><div class="sl-val">akashrathod.dev@gmail.com</div></div><div class="sl-arr">→</div></a>
+          <a href="https://www.linkedin.com/in/iamakash-rathod" target="_blank" class="slink"><div class="sl-ico">💼</div><div><div class="sl-lbl">LinkedIn</div><div class="sl-val">linkedin.com/in/iamakash-rathod</div></div><div class="sl-arr">→</div></a>
+          <a href="https://github.com/iamakash-rathod" target="_blank" class="slink"><div class="sl-ico">🐙</div><div><div class="sl-lbl">GitHub</div><div class="sl-val">github.com/iamakash-rathod</div></div><div class="sl-arr">→</div></a>
+          <a href="https://leetcode.com/iamakash-rathod" target="_blank" class="slink"><div class="sl-ico">⚡</div><div><div class="sl-lbl">LeetCode</div><div class="sl-val">250+ problems solved</div></div><div class="sl-arr">→</div></a>
+        </div>
+      </div>
+      <div class="rvr">
+        <div class="cform">
+          <div class="cf-head">Send a message</div>
+          <div class="fld"><label>Name</label><input type="text" id="fn" placeholder="Jane Smith"/></div>
+          <div class="fld"><label>Email</label><input type="email" id="fe" placeholder="jane@example.com"/></div>
+          <div class="fld"><label>Subject</label><input type="text" id="fs" placeholder="Internship Opportunity"/></div>
+          <div class="fld"><label>Message</label><textarea id="fm" placeholder="Tell me about your project or opportunity..."></textarea></div>
+          <button class="sbtn" onclick="sendMsg()">Send Message ✉</button>
+          <div class="fmsg" id="fmsg">✅ Message received! I'll reply within 24 hours.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="#hero" id="btt" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:60;width:44px;height:44px;border-radius:50%;background:var(--coral);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transition:opacity .3s,transform .3s;transform:translateY(12px);text-decoration:none;box-shadow:0 8px 28px rgba(255,107,71,.4)" aria-label="Back to top">↑</a>
+
+<footer>
+  <span>© 2025 <a href="#">Akash Rathod</a>. Crafted with 🧡 in Pune, India.</span>
+  <span>MCA Student · Backend Developer</span>
+</footer>
+
+<script src="/new.js"></script>
+</body>
+</html>
